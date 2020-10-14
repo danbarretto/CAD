@@ -1,0 +1,130 @@
+Amount of vetor=10
+Thread 2 inicio = 4 fim = 5
+Thread 0 inicio = 0 fim = 1
+Thread 3 inicio = 6 fim = 9
+Thread 1 inicio = 2 fim = 3
+OMP NO FOR: Tam=10, Num_Threads=4, maior=10, Elapsed wall clock time = 0.015790  
+
+
+Amount of vetor=100
+Thread 2 inicio = 50 fim = 74
+Thread 1 inicio = 25 fim = 49
+Thread 0 inicio = 0 fim = 24
+Thread 3 inicio = 75 fim = 99
+OMP NO FOR: Tam=100, Num_Threads=4, maior=100, Elapsed wall clock time = 0.000431  
+
+
+Amount of vetor=1000
+Thread 3 inicio = 750 fim = 999
+Thread 1 inicio = 250 fim = 499
+Thread 0 inicio = 0 fim = 249
+Thread 2 inicio = 500 fim = 749
+OMP NO FOR: Tam=1000, Num_Threads=4, maior=1000, Elapsed wall clock time = 0.000775  
+
+
+Amount of vetor=10000
+Thread 1 inicio = 2500 fim = 4999
+Thread 2 inicio = 5000 fim = 7499
+Thread 3 inicio = 7500 fim = 9999
+Thread 0 inicio = 0 fim = 2499
+OMP NO FOR: Tam=10000, Num_Threads=4, maior=10000, Elapsed wall clock time = 0.010083  
+
+
+Amount of vetor=100000
+Thread 3 inicio = 75000 fim = 99999
+Thread 2 inicio = 50000 fim = 74999
+Thread 0 inicio = 0 fim = 24999
+Thread 1 inicio = 25000 fim = 49999
+OMP NO FOR: Tam=100000, Num_Threads=4, maior=100000, Elapsed wall clock time = 0.001952  
+
+
+Amount of vetor=1000000
+Thread 2 inicio = 500000 fim = 749999
+Thread 3 inicio = 750000 fim = 999999
+Thread 1 inicio = 250000 fim = 499999
+Thread 0 inicio = 0 fim = 249999
+OMP NO FOR: Tam=1000000, Num_Threads=4, maior=1000000, Elapsed wall clock time = 0.007966  
+
+
+Amount of vetor=10000000
+Thread 0 inicio = 0 fim = 2499999
+Thread 1 inicio = 2500000 fim = 4999999
+Thread 3 inicio = 7500000 fim = 9999999
+Thread 2 inicio = 5000000 fim = 7499999
+OMP NO FOR: Tam=10000000, Num_Threads=4, maior=10000000, Elapsed wall clock time = 0.062403  
+
+
+Amount of vetor=100000000
+Thread 1 inicio = 25000000 fim = 49999999
+Thread 0 inicio = 0 fim = 24999999
+Thread 3 inicio = 75000000 fim = 99999999
+Thread 2 inicio = 50000000 fim = 74999999
+OMP NO FOR: Tam=100000000, Num_Threads=4, maior=100000000, Elapsed wall clock time = 0.481153  
+
+
+Amount of vetor=1000000000
+Amount of vetor=10
+Thread 3 inicio = 6 fim = 9
+Thread 0 inicio = 0 fim = 1
+Thread 1 inicio = 2 fim = 3
+Thread 2 inicio = 4 fim = 5
+OMP NO FOR: Tam=10, Num_Threads=4, maior=10, Elapsed wall clock time = 0.013933  
+
+
+Amount of vetor=100
+Thread 3 inicio = 75 fim = 99
+Thread 0 inicio = 0 fim = 24
+Thread 2 inicio = 50 fim = 74
+Thread 1 inicio = 25 fim = 49
+OMP NO FOR: Tam=100, Num_Threads=4, maior=100, Elapsed wall clock time = 0.001378  
+
+
+Amount of vetor=1000
+Thread 2 inicio = 500 fim = 749
+Thread 0 inicio = 0 fim = 249
+Thread 1 inicio = 250 fim = 499
+Thread 3 inicio = 750 fim = 999
+OMP NO FOR: Tam=1000, Num_Threads=4, maior=1000, Elapsed wall clock time = 0.000070  
+
+
+Amount of vetor=10000
+Thread 3 inicio = 7500 fim = 9999
+Thread 0 inicio = 0 fim = 2499
+Thread 1 inicio = 2500 fim = 4999
+Thread 2 inicio = 5000 fim = 7499
+OMP NO FOR: Tam=10000, Num_Threads=4, maior=10000, Elapsed wall clock time = 0.000056  
+
+
+Amount of vetor=100000
+Thread 2 inicio = 50000 fim = 74999
+Thread 1 inicio = 25000 fim = 49999
+Thread 3 inicio = 75000 fim = 99999
+Thread 0 inicio = 0 fim = 24999
+OMP NO FOR: Tam=100000, Num_Threads=4, maior=100000, Elapsed wall clock time = 0.001878  
+
+
+Amount of vetor=1000000
+Thread 1 inicio = 250000 fim = 499999
+Thread 0 inicio = 0 fim = 249999
+Thread 2 inicio = 500000 fim = 749999
+Thread 3 inicio = 750000 fim = 999999
+OMP NO FOR: Tam=1000000, Num_Threads=4, maior=1000000, Elapsed wall clock time = 0.002537  
+
+
+Amount of vetor=10000000
+Thread 1 inicio = 2500000 fim = 4999999
+Thread 3 inicio = 7500000 fim = 9999999
+Thread 0 inicio = 0 fim = 2499999
+Thread 2 inicio = 5000000 fim = 7499999
+OMP NO FOR: Tam=10000000, Num_Threads=4, maior=10000000, Elapsed wall clock time = 0.030295  
+
+
+Amount of vetor=100000000
+Thread 1 inicio = 25000000 fim = 49999999
+Thread 0 inicio = 0 fim = 24999999
+Thread 2 inicio = 50000000 fim = 74999999
+Thread 3 inicio = 75000000 fim = 99999999
+OMP NO FOR: Tam=100000000, Num_Threads=4, maior=100000000, Elapsed wall clock time = 0.300188  
+
+
+Amount of vetor=1000000000
