@@ -1,0 +1,1 @@
+fgetc() reads the next character from stream and returns it as an unsigned char cast to an int or EOF on end of file or error getc() is equivalent to fgetc() except that it may be implemented as a macro which evaluates stream more than once AaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAaaaaaaaaaaaaaa

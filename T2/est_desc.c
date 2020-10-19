@@ -221,31 +221,6 @@ int main(int argc, char const* argv[]) {
   print_result(mediaA, mediaH, medianas, modas, desvios, variancias,
               coeficientes, m);
 
-
-
-    for(int i=0;i<m;i++)
-    for(int j=0;j<n;j++)
-      cpy[i][j] = mat[i][j];
-
-  //SEQUENCIAL-------------------------
-  clock_t start = clock();
-  for(int i=0;i<m;i++){
-    mediaA[i] = media_aritmetica(mat[i],n);
-    mediaH[i] = media_harmonica(mat[i],n);
-    variancias[i] = variancia(mat[i], n, mediaA[i]);
-    desvios[i] = desvio_padrao(variancias[i]);
-    qsort(cpy[i], n, sizeof(double), cmp);
-    medianas[i] = mediana(cpy[i],n);
-    modas[i] = moda(cpy[i], n);
-    coeficientes[i] = coef_variacao(desvios[i], mediaA[i]);
-
-  }
-  clock_t end = clock();
-  //---------------------------------------
-  printf("\n\n");
-  print_result(mediaA, mediaH, medianas, modas, desvios, variancias,
-               coeficientes, m);
-
   for (int i = 0; i < m; i++) free(mat[i]);
   free(mat);
 
