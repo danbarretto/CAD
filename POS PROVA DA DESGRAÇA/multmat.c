@@ -94,6 +94,7 @@ int main(int argc, char* argv[]) {
 0 ,MPI_COMM_WORLD);
 
   //}
+  
 */
   // OPENMP
   int i, j, k;
