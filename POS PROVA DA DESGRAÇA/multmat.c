@@ -47,7 +47,12 @@ int main(int argc, char* argv[]) {
   MPI_Comm_size(MPI_COMM_WORLD, &npes);
   MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 
-  
+  if(npes > N) {
+    if(myrank == 0)
+      printf("\n\n\nERROR: Nao pode ter mais processos do que linhas de matriz\n\n\n");
+    MPI_Finalize();
+    exit(EXIT_FAILURE);
+  }
 
   int *B = cria_matriz_vetor(N, N), *A, *C;
   if (myrank == 0) {
