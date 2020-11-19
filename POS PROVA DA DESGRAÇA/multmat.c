@@ -21,13 +21,23 @@ int rand_vet(int* vet, int n) {
   }
 }
 
-void print_vet_mat(int* vet, int n, int m) {
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-      printf("%d ", vet[i * n + j]);
+void print_vet_mat(int* vet, int n, int m,int transpor) {
+  if(transpor){
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+        printf("%d ", vet[j * n  + i]);
+      }
+      printf("\n");
     }
-    printf("\n");
+  }else{
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
+        printf("%d ", vet[i * n + j]);
+      }
+      printf("\n");
+    }
   }
+  
 }
 
 void destroy_mat(int** mat, int n) {
@@ -91,10 +101,10 @@ int main(int argc, char* argv[]) {
   for (j = 0; j < N; j++) {
     for (i = 0; i < N / npes; i++) {
       for (k = 0; k < N; k++) {
-        printf("\nmyrank=%d thread num:%d", myrank, omp_get_thread_num());
-        printf("\nC[%d, %d] += %d * %d\n", i * N, j, A[i * N + k],
+        //printf("\nmyrank=%d thread num:%d", myrank, omp_get_thread_num());
+        //printf("\nC[%d, %d] += %d * %d\n", i * N, j, A[i * N + k],
                B[k * N + j]);
-        C[i * N + j] += A[i * N + k] * B[k * N + j];
+        C[i * N + j] += A[i * N + k] * B[j * N + k];//linha de A vezes linha de B(pois B esta transposta)
       }
     }
   }
@@ -106,11 +116,11 @@ int main(int argc, char* argv[]) {
 
   if (myrank == 0) {
     printf("\n\n");
-    print_vet_mat(A, N, N);
+    print_vet_mat(A, N, N, 0);
     printf("\n\n\t       * \n");
-    print_vet_mat(B, N, N);
+    print_vet_mat(B, N, N, 1);
     printf("\n\n\t       = \n");
-    print_vet_mat(C, N, N);
+    print_vet_mat(C, N, N, 0);
     printf("\n\n");
 
     fflush(0);
