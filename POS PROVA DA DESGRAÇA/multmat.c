@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define N 10
+#define N 5
 #define NUMTHREADS 4
 
 int* cria_matriz_vetor(int n, int m) {
@@ -101,10 +101,7 @@ int main(int argc, char* argv[]) {
     MPI_Scatterv (A,sizes,disp,MPI_INT,A,rec_size_resto*N,MPI_INT,0,MPI_COMM_WORLD);
   }
   
-
   printf("tamo aqui:  %d\n", myrank);
-  
-
   
   // OPENMP
   int i, j, k;
@@ -120,23 +117,22 @@ int main(int argc, char* argv[]) {
   }
 
   
-
-    print_vet_mat(C, N, N, 0);
-    printf("\n\n");
-
-  MPI_Gatherv( C,N*rec_size_resto,MPI_INT,C,sizes,disp,MPI_INT, 0, MPI_COMM_WORLD);
-  
   if (myrank == 0) {
     printf("\n\n");
     print_vet_mat(A, N, N, 0);
     printf("\n\n\t       * \n");
     print_vet_mat(B, N, N, 1);
     printf("\n\n\t       = \n");
-    print_vet_mat(C, N, N, 0);
-    printf("\n\n");
 
     fflush(0);
   }
+  MPI_Barrier(MPI_COMM_WORLD);
+  print_vet_mat(C, num_linhas,N, 0);
+  printf("\n\n");
+
+  MPI_Gatherv( C,N*rec_size_resto,MPI_INT,C,sizes,disp,MPI_INT, 0, MPI_COMM_WORLD);
+  
+  
   free(A);
   free(B);
   free(C);
